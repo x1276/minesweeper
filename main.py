@@ -10,7 +10,7 @@ class player:
             res = []
             for j in range(dimx):
                 res.append(False)
-                dat += res
+            dat.append(res)
 
         def create(self):
             for i in range(self.dimy-1):
