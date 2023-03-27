@@ -16,17 +16,17 @@ class player:
             for i in range(self.dimy-1):
                 for j in range(self.dimx-1):
                     if(rd.randint(0,5) == 5):
-                        print(self.dat[i][j])
                         self.dat[i][j] = True
 
         def display(self):
             res = ""
-            for y in len(self.dat):
-                for x in len(self.dat[y]):
+            for y in range(len(self.dat)):
+                for x in range(len(self.dat[y])):
                     if self.dat[y][x] == 1:
-                        res += "{" + str(self.cell.nom(self, x, y)) + "}"
+                        res += "{" + "M" + "}"
                     else:
-                        res += "[ ]"
+                        res += "[" + str(self.cell.nom(self, x, y)) + "]"
+                res += "\n"
             print(res)
 
         class cell:
